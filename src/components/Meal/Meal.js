@@ -1,17 +1,17 @@
 import React from "react";
+import './Meal.css';
 
 const Meal = (props) => {
   console.log(props);
   const { strMeal, strArea, strCategory, strMealThumb } = props.meal;
   console.log(props.meal);
   return (
-    <div>
+    <div className="meals">
       <div className="meal">
-        <h1>Food Name: {strMeal}</h1>
+        <h3>Food Name: {strMeal}</h3>
         <img src={strMealThumb} alt="" />
-        <h3>Population: {strArea}</h3>
-        <h3>Category: {strCategory}</h3>
-        {/* <h5>Area: {area}</h5> */}
+        <p>Category: {strCategory}</p>
+        <p>Area: {strArea}</p>
       </div>
     </div>
   );

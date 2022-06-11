@@ -1,0 +1,19 @@
+.text-field{
+    background-color:black;
+}
+.title{
+    color:bisque;
+}
+.input{
+    padding:10px 150px;
+}
+.meals-container{
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+@media only screen and (max-width: 668px){
+.meals-container{
+    display:grid;
+    grid-template-columns: repeat(1, 1fr)
+}
+}

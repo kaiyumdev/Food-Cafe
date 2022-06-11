@@ -1,10 +1,13 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import Meal from '../Meal/Meal';
+import Meal from "../Meal/Meal";
+import "./Api.css";
+import { faSearch } from '@fortawesome/free-solid-svg-icons'
 
 const Api = () => {
   const [meals, setMeals] = useState([]);
-  const [search, setSearch] = useState('');
+  const [search, setSearch] = useState("");
   console.log(meals);
 
   useEffect(() => {
@@ -17,23 +20,22 @@ const Api = () => {
   }, [search]);
 
   const handleChange = (e) => {
-      setSearch(e.target.value)
-  }
+    setSearch(e.target.value);
+  };
   return (
     <div>
-      <h1>This is food cafe</h1>
-      <input type="text" onChange={handleChange} />
-      {
-          meals.map((meal) => (
-            <Meal meal={meal} key={meal.idMeal}></Meal>
-          ))
-      }
-      {/* {meals.map((item) => (
-        <div key={item.idMeal}>
-          <p>{item.strMeal}</p>
-          <img src={item.strMealThumb} alt="" />
+      <div className="text-field">
+        <h1 className="title">Our Food Cafe</h1>
+        <div className="input-text">
+        <input  className="input" type="text" placeholder="search your favorite food" onChange={handleChange}/>
+        <FontAwesomeIcon icon={faSearch}></FontAwesomeIcon>
         </div>
-      ))} */}
+      </div>
+      <div className="meals-container">
+        {meals.map((meal) => (
+          <Meal meal={meal} key={meal.idMeal}></Meal>
+        ))}
+      </div>
     </div>
   );
 };
