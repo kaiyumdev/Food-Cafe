@@ -28,7 +28,6 @@ const Api = () => {
         <h1 className="title">Our Food Cafe</h1>
         <div className="input-text">
         <input  className="input" type="text" placeholder="search your favorite food" onChange={handleChange}/>
-        <FontAwesomeIcon icon={faSearch}></FontAwesomeIcon>
         </div>
       </div>
       <div className="meals-container">

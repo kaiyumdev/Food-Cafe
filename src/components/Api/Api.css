@@ -2,7 +2,7 @@
     background-color:black;
 }
 .title{
-    color:bisque;
+    color:white;
 }
 .input{
     padding:10px 150px;
@@ -10,6 +10,9 @@
 .meals-container{
     display:grid;
     grid-template-columns: repeat(3, 1fr);
+}
+input[type="text"] {
+    font-family: FontAwesome;
 }
 @media only screen and (max-width: 668px){
 .meals-container{
